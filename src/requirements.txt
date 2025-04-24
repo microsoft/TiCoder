@@ -1,0 +1,8 @@
+openai
+tiktoken
+astunparse
+numpy
+pyext
+pebble
+tiktoken
+azure-identity
