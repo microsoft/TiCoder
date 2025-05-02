@@ -440,7 +440,7 @@ if __name__ == "__main__":
         with open(config.codex_cache_file, 'w') as f:
             json.dump(config.codex_query_response_log, f)
     # print number of times a query was made and skipped
-    if num_threads == 1:
+    if False: #num_threads == 1:
         # FIXME: these globals don't work for multi-thread yet
         print(f"Number of model queries made (skipped) = {config.mk_codex_query_cnt} ({config.skip_codex_query_cnt})")
         if total_tests > 0:
