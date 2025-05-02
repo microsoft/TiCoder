@@ -88,7 +88,6 @@ This mode is intended for an actual human user to respond to queries.
        --max_code_suggestions 5 \
        --fix_num_tests 5 \
        --model "gpt-3.5-turbo-16k" \
-       --verbosity 1
    ```
   or if using the Azure Open AI API:
    ```bash
@@ -99,9 +98,8 @@ This mode is intended for an actual human user to respond to queries.
        --model "gpt-3.5-turbo-16k" \
        --use_azure \
        --azure_config configs/azure.json \
-       --verbosity 1
    ```
- 
+To view intermediate results, use `--verbosity 1`.  
 
 ### Simulating a User
 If you want to simulate a user’s responses automatically, include `--query_oracle` to indicate you’re simulating user feedback by querying the “oracle” (the ground truth). Remove this flag to get actual user feedback.
