@@ -31,13 +31,14 @@ Currently, we have tested the setup on Linux Ubuntu machine. Support for Windows
     git clone https://github.com/microsoft/TiCoder.git
     ```
 
-2. **Create and activate a virtual environment** (Python 3.9 is recommended):
+2. **Create and activate a conda environment** (Python 3.9 is recommended):
+   Assuming you have **Anaconda**: 
    ```bash
-   python3.9 -m venv venv
-   source venv/bin/activate
+   conda create --name ticoder python=3.9
+   conda activate ticoder
    ```
 
-3. **Install dependencies**:
+4. **Install dependencies**:
    ```bash
    cd src
    pip install -r requirements.txt
