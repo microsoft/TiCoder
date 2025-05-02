@@ -31,13 +31,14 @@ Currently, we have tested the setup on Linux Ubuntu machine. Support for Windows
     git clone https://github.com/microsoft/TiCoder.git
     ```
 
-2. **Create and activate a virtual environment** (Python 3.9 is recommended):
+2. **Create and activate a conda environment** (Python 3.9 is recommended):
+   Assuming you have **Anaconda**: 
    ```bash
-   python3.9 -m venv venv
-   source venv/bin/activate
+   conda create --name ticoder python=3.9
+   conda activate ticoder
    ```
 
-3. **Install dependencies**:
+4. **Install dependencies**:
    ```bash
    cd src
    pip install -r requirements.txt
@@ -52,7 +53,7 @@ Make sure you have a valid OpenAI API Key. You can retrieve it from [OpenAI API 
 
 Then, set the environment variable:
 ```bash
-export OPENAI_KEY=<your_openai_api_key>
+export OPENAI_API_KEY=<your_openai_api_key>
 ```
 If you plan to use Azure OpenAI, you can can keep this variable empty. 
 
@@ -85,8 +86,8 @@ This mode is intended for an actual human user to respond to queries.
    python3 main.py \
        --data_file_path ../datasets/mbpp/toy.jsonl \
        --max_code_suggestions 5 \
-       --fix_num_tests 20 \
-       --model "gpt-35-turbo_1106" \
+       --fix_num_tests 5 \
+       --model "gpt-3.5-turbo-16k" \
        --verbosity 1
    ```
   or if using the Azure Open AI API:
@@ -94,8 +95,8 @@ This mode is intended for an actual human user to respond to queries.
    python3 main.py \
        --data_file_path ../datasets/mbpp/toy.jsonl \
        --max_code_suggestions 5 \
-       --fix_num_tests 20 \
-       --model "gpt-35-turbo_1106" \
+       --fix_num_tests 5 \
+       --model "gpt-3.5-turbo-16k" \
        --use_azure \
        --azure_config configs/azure.json \
        --verbosity 1
