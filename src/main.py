@@ -165,15 +165,15 @@ def tappy_entry_func(prog_data, orig_codes, codes, results, n):
             debug_print('-' * 80)
 
         print(f"Final Code suggestions: {len(codes)}")
-        debug_print('*' * 40 + 'Final Code Suggestions' + '*' * 40)
+        print('*' * 40 + 'Final Code Suggestions that are consistent with user-approved tests' + '*' * 40)
         for code in codes:
-            debug_print(code)
-            debug_print('-' * 80)
-        print(f"Final Test suggestions: {len(tests)}")
-        debug_print('*' * 40 + 'Final Test Suggestions' + '*' * 40)
+            print(code)
+            print('-' * 80)
+        print(f"Final User-Approved Test suggestions: {len(tests)}")
+        print('*' * 40 + 'Final User-Approved Test Suggestions' + '*' * 40)
         for test in tests:
-            debug_print(test)
-            debug_print('-' * 80)
+            print(test)
+            print('-' * 80)
         status  = [ex.satisfies_validation_tests(code, prog_data) for code in codes]
         weights = [orig_codes.count(code) for code in codes]
 
