@@ -106,7 +106,7 @@ token_per_minute_limit = 10000
 # OpenAI key
 OPENAI_API_KEY = 'OPENAI_API_KEY'
 if OPENAI_API_KEY not in os.environ:
-    print("Please set the environment variable OPENAI_KEY")
+    print("Please set the environment variable OPENAI_API_KEY")
     sys.exit(1)
 
 # Model parameters
@@ -115,8 +115,8 @@ MAX_TOKENS = 300
 TOP_P = 0.95
 MODEL = 'gpt-4-0613'
 NUM_CODEX_RETRIES = 20
-MAX_NUM_CODEX_CODE_SUGGESTIONS = 100
-MAX_NUM_CODEX_TEST_SUGGESTIONS = 50
+MAX_NUM_CODEX_CODE_SUGGESTIONS = 10
+MAX_NUM_CODEX_TEST_SUGGESTIONS = 10
 
 
 # Utils
