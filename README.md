@@ -1,4 +1,4 @@
-# TiCoder: Test-driven Interactive Code Generation
+# TiCoder: Test-driven User-Intent-Formalization for Interactive Code Generation 
 
 TiCoder is a workflow for python code generation that allows you to interactively leverage lightweight user feedback to (a) formalize user intent using generated tests that can be useful for debugging, and (b) produce an improved set of code suggestions by pruning and ranking candidate code suggestions. 
 
