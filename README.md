@@ -52,7 +52,7 @@ Make sure you have a valid OpenAI API Key. You can retrieve it from [OpenAI API 
 
 Then, set the environment variable:
 ```bash
-export OPENAI_API_KEY=<your_openai_api_key>
+export OPENAI_KEY=<your_openai_api_key>
 ```
 If you plan to use Azure OpenAI, you can can keep this variable empty. 
 
