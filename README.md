@@ -87,7 +87,7 @@ This mode is intended for an actual human user to respond to queries.
        --data_file_path ../datasets/mbpp/toy.jsonl \
        --max_code_suggestions 5 \
        --fix_num_tests 5 \
-       --model "gpt-3.5-turbo-16k" \
+       --model "gpt-3.5-turbo-16k"
    ```
   or if using the Azure Open AI API:
    ```bash
@@ -97,7 +97,7 @@ This mode is intended for an actual human user to respond to queries.
        --fix_num_tests 5 \
        --model "gpt-3.5-turbo-16k" \
        --use_azure \
-       --azure_config configs/azure.json \
+       --azure_config configs/azure.json
    ```
 To view intermediate results, use `--verbosity 1`.  
 
@@ -115,7 +115,6 @@ python3 main.py \
   --data_file_path ../datasets/mbpp/mbpp.jsonl \
   --query_oracle \
   --max_code_suggestions 5 \
-  --verbosity 1 \
   --max_num_examples 10 \
   --fix_num_tests 10 \
   --output_tag <foo>
@@ -123,9 +122,9 @@ python3 main.py \
 This produces a file `global_results<foo>.json` which logs all results. To run on the full MBPP dataset, drop the `--max_num_examples` flag.
 
 ### Gathering Metrics
-Use the following to gather metrics from `global_results<foo>.json`:
+Use the following to gather metrics from `results/global_results<foo>.json`:
 ```bash
-python3 analyze_data.py global_results<foo>.json
+python3 analyze_data.py results/global_results<foo>.json
 ```
 This will return a summary of the results, including the pass@k values at each simulated user interaction. 
 
