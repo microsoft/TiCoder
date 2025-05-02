@@ -24,6 +24,8 @@ TiCoder is a workflow for python code generation that allows you to interactivel
 
 ## Installation and Setup
 
+Currently, we have tested the setup on Linux Ubuntu machine. Support for Windows coming soon!
+
 1. **Clone this repository** 
     ```
     git clone https://github.com/microsoft/TiCoder.git
@@ -37,6 +39,7 @@ TiCoder is a workflow for python code generation that allows you to interactivel
 
 3. **Install dependencies**:
    ```bash
+   cd src
    pip install -r requirements.txt
    ```
 
