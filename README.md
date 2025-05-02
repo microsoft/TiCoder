@@ -86,8 +86,8 @@ This mode is intended for an actual human user to respond to queries.
    python3 main.py \
        --data_file_path ../datasets/mbpp/toy.jsonl \
        --max_code_suggestions 5 \
-       --fix_num_tests 20 \
-       --model "gpt-35-turbo_1106" \
+       --fix_num_tests 5 \
+       --model "gpt-3.5-turbo-16k" \
        --verbosity 1
    ```
   or if using the Azure Open AI API:
@@ -95,8 +95,8 @@ This mode is intended for an actual human user to respond to queries.
    python3 main.py \
        --data_file_path ../datasets/mbpp/toy.jsonl \
        --max_code_suggestions 5 \
-       --fix_num_tests 20 \
-       --model "gpt-35-turbo_1106" \
+       --fix_num_tests 5 \
+       --model "gpt-3.5-turbo-16k" \
        --use_azure \
        --azure_config configs/azure.json \
        --verbosity 1
