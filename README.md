@@ -155,8 +155,8 @@ python3 main.py \
    nohup python3 main.py \
      --data_file_path ../datasets/mbpp/mbpp.jsonl \
      --max_num_examples 10 \
-     --max_code_suggestions 100 \
-     --fix_num_tests 50 \
+     --max_code_suggestions 5 \
+     --fix_num_tests 10 \
      --single \
      --model "gpt-4-0613" \
      --codex_cache ./mbpp_gpt4.json \
@@ -172,8 +172,8 @@ python3 main.py \
    ```bash
    nohup python3 main.py \
      --data_file_path ../datasets/mbpp/mbpp.jsonl \
-     --max_code_suggestions 100 \
-     --fix_num_tests 50 \
+     --max_code_suggestions 5 \
+     --fix_num_tests 10 \
      --single \
      --model "gpt-4-0613" \
      --codex_cache ./mbpp_gpt4.json \
